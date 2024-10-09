@@ -4,7 +4,7 @@ import "./ButtonComp.scss";
 interface ButtonCompProps{
     classname? : string,
     text:string,
-    type : any
+    type : "button" | "submit" | "reset";
 }
 function ButtonComp({classname ,text,type}:ButtonCompProps) {
   return (
