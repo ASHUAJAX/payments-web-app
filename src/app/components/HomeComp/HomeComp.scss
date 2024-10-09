@@ -1,14 +1,16 @@
 @import "../../styles/mixins.scss";
 .Home {
   &_wrapper {
-    background: linear-gradient(to bottom right, #21154a 20%, #8b4ad5d6),
-      url("../../public/bg-home.webp")
-      ;
+    background: linear-gradient(to top right, #6e00ebab, #6e00eb),
+      url("../../../../public/bg-home.webp");
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     background-attachment: fixed;
     @include flex-center;
     flex-direction: column;
-    height: 100vh;
+    height: 120vh;
+    margin-bottom: 150px;
     color: white;
     text-align: center;
     gap: 10px;

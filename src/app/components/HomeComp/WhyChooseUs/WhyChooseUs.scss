@@ -1,0 +1,40 @@
+@import "../../../styles/mixins.scss";
+@import "../../../styles/var.scss";
+.WhyChooseUs {
+    width: 95%;
+    margin: auto;
+    margin-top: 150px;
+
+  &_headParaWrapper {
+    @include flex-center;
+    gap: 100px;
+    margin-bottom: 2rem;
+    h1{
+        @include headingFontSizeMixin;
+     
+        
+    }p{
+        width: 70%;
+text-align: justify;
+font-size: 16px;
+font-weight: 400;
+line-height: 1.7em;
+    }
+  }
+  &_counterWrapper {
+    @include flex-center;
+    gap: 100px;
+   
+    margin-top: 2rem;
+    &_card {
+        h1{
+            font-size: 5.5rem;
+            color: $primaryColor;
+            font-weight: 900;
+        }
+        p{
+            font-weight: 700;
+        }
+    }
+  }
+}

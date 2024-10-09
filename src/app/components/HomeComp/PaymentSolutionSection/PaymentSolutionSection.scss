@@ -1,0 +1,50 @@
+@import "../../../styles/mixins.scss";
+@import "../../../styles/var.scss";
+
+
+.PaymentSolutionSection {
+    width: 70%;
+    margin: auto;
+
+    &_heading {
+        text-align: center;
+        @include headingFontSizeMixin;
+    }
+
+    &_para {
+        text-align: center;
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+}
+
+.reversedCard{
+    flex-direction: row-reverse
+}
+.alignRight{
+    text-align: right
+}
+.PaymentCard {
+    @include flex-center;
+    padding: 10px;
+    width: 100%;
+    gap: 10rem;
+   
+
+    &_imgWrapper{
+        flex: 1;
+        text-align: center;
+        img {
+            border: 29px solid $primaryColor;
+            width: 290px;
+            border-radius: 1000px;
+            box-shadow: $primaryColor 0px 0px 20px;
+        }
+    }
+    &_contentWrapper{
+        h1{
+            font-weight: 500;
+        }
+        
+    }
+}
