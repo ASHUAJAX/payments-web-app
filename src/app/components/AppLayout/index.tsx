@@ -1,10 +1,10 @@
 import React from 'react'
 import Navbar from '../Navbar';
 import Footer from '../Footer';
-interface AppLayout {
+interface AppLayoutProps {
     component: React.ReactNode;
 }
-function AppLayout({ component }: AppLayout) {
+function AppLayout({ component }: AppLayoutProps) {
     return (
         <>  <Navbar />
             {component}

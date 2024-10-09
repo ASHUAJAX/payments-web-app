@@ -6,7 +6,10 @@ function Navbar() {
   return (
     <div className='Navbar'>
       <nav className='Navbar_Wrapper'>
-        <div className='Navbar_Wrapper_logo'></div>
+        <div className='Navbar_Wrapper_logo'>
+          <h1>PayWeb</h1>
+        </div>
+        <div className='Navbar_Wrapper_navContainer'>
         <ul>
           {
             data.map((elm, ix) => (
@@ -14,6 +17,8 @@ function Navbar() {
             ))
           }
         </ul>
+        </div>
+       
       </nav>
 
 

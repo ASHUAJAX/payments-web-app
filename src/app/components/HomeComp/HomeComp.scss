@@ -1,0 +1,27 @@
+@import "../../styles/mixins.scss";
+.Home {
+  &_wrapper {
+    background: linear-gradient(to bottom right, #21154a 20%, #8b4ad5d6),
+      url("../../public/bg-home.webp")
+      ;
+    background-size: cover;
+    background-attachment: fixed;
+    @include flex-center;
+    flex-direction: column;
+    height: 100vh;
+    color: white;
+    text-align: center;
+    gap: 10px;
+    &_heading {
+      font-size: 5.7rem;
+      font-weight: 900;
+      margin-top: 7rem;
+    }
+    &_para {
+      font-size: 1.1rem;
+    }
+    button {
+      margin-top: 10px;
+    }
+  }
+}

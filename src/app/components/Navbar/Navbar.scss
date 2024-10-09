@@ -1,15 +1,35 @@
 @import "../../styles/mixins.scss";
 .Navbar {
-    height: 0px;
+  height: 0px;
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+  top: 0px;
+  color: white;
   &_Wrapper {
     @include flex-center;
-    height: max-content;
-    &_logo {
+    width: 95%;
+    margin: auto;
+    height: 77px;
+   &_logo {
+      flex: 1;
+      font-size: 1.5rem;
     }
-    ul {
-      @include flex-center;
-      li {
-        list-style: none;
+    &_navContainer {
+      flex: 2;
+      ul {
+        @include flex-center;
+        gap: 29px;
+        width: max-content;
+        margin-left: auto;
+        li {
+          list-style: none;
+          font-size: 1.1rem;
+          text-transform: capitalize;
+          &:hover {
+            border-bottom: 2px solid white;
+          }
+        }
       }
     }
   }
