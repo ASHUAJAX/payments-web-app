@@ -2,7 +2,9 @@ import React from 'react';
 
 function HomeComp() {
   return (
-    <div>HomeComp</div>
+    <div>
+      
+    </div>
   )
 }
 

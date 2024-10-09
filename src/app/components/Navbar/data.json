@@ -1,0 +1,22 @@
+[
+  {
+    "name": "home",
+    "link": "/home"
+  },
+  {
+    "name": "contact",
+    "link": "/contact"
+  },
+  {
+    "name": "privacy policy",
+    "link": "/privacy policy"
+  },
+  {
+    "name": "refund policy",
+    "link": "/refund policy"
+  },
+  {
+    "name": "terms & condition",
+    "link": "/terms & condition"
+  }
+]
