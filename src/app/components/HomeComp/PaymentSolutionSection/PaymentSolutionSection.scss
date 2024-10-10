@@ -24,17 +24,22 @@
 .alignRight{
     text-align: right
 }
+.alignLeft{
+    text-align: left!important;
+}
 .PaymentCard {
     @include flex-center;
     padding: 10px;
     width: 100%;
-    gap: 10rem;
    
+   gap: 7.7rem;
 
     &_imgWrapper{
         flex: 1;
-        text-align: center;
+       
+        text-align: right;
         img {
+           
             border: 29px solid $primaryColor;
             width: 290px;
             border-radius: 1000px;
@@ -42,6 +47,8 @@
         }
     }
     &_contentWrapper{
+       
+        flex: 1;
         h1{
             font-weight: 500;
         }

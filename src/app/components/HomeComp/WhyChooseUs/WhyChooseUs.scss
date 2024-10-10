@@ -24,13 +24,14 @@ line-height: 1.7em;
   &_counterWrapper {
     @include flex-center;
     gap: 100px;
-   
+   text-align: center;
     margin-top: 2rem;
     &_card {
         h1{
             font-size: 5.5rem;
             color: $primaryColor;
             font-weight: 900;
+            
         }
         p{
             font-weight: 700;

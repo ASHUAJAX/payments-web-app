@@ -10,7 +10,7 @@ interface PaymentCard {
 function PaymentCard({ heading, para, type, imgSrc }: PaymentCard) {
     return (
         <div className={`PaymentCard ${type && 'reversedCard'}`}>
-            <div className={"PaymentCard_imgWrapper"}>
+            <div className={`PaymentCard_imgWrapper ${type && 'alignLeft'}`}>
                 <img src={imgSrc} alt={heading} />
             </div>
             <div className={`PaymentCard_contentWrapper ${type && 'alignRight'}`} >
