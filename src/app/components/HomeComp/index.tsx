@@ -3,6 +3,7 @@ import "./HomeComp.scss";
 import ButtonComp from '../ButtonComp';
 import PaymentSolutionSection from './PaymentSolutionSection';
 import WhyChooseUs from './WhyChooseUs';
+import TestimonialComp from './TestimonialComp';
 function HomeComp() {
   return (
     <div className='Home'>
@@ -16,6 +17,7 @@ function HomeComp() {
 
       <PaymentSolutionSection/>
       <WhyChooseUs/>
+      <TestimonialComp/>
     </div>
   )
 }

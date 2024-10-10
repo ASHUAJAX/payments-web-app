@@ -1,0 +1,79 @@
+@import "../../../styles/mixins.scss";
+@import "../../../styles/var.scss";
+
+.TestimonialComp {
+  width: 100%;
+  background-color: $secondaryColor;
+  color: white;
+  margin: 50px 0px;
+  padding: 50px 0px;
+  &_img {
+    text-align: center;
+    margin-bottom: 20px;
+    img {
+      margin: auto;
+    }
+  }
+  &_cardWrapper {
+  }
+}
+
+.TestimonialCard {
+  width: 700px;
+  margin: auto;
+
+  &_msg {
+    height: 250px;
+    margin-bottom: 50px;
+    font-size: 2.7rem;
+    text-align: justify;
+    animation: ani 0.2s linear 0s 1 normal;
+  }
+  &_bottomWrapper {
+    @include flex-center;
+    margin-top: 40px;
+    &_contentWrapper {
+      @include flex-center;
+      justify-content: flex-start;
+      flex: 1;
+      gap: 20px;
+      img {
+        border-radius: 100px;
+        width: 3rem;
+      }
+      p {
+      }
+    }
+    &_navigationWrapper {
+      @include flex-center;
+      justify-content: flex-end;
+      flex: 1;
+      gap: 20px;
+      div {
+        background: url("../../../../../public/testimonialImg/shape.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 40px;
+        width: 40px;
+        @include flex-center;
+        cursor: pointer;
+        svg {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@keyframes ani {
+    0% {
+      transform: translateY(-100px) rotateX(90deg);  // Starts from above, rotated in 3D
+      opacity: 0;  // Start with invisibility
+    }
+    100% {
+      transform: translateY(0) rotateX(0deg);  // Ends at the original position
+      opacity: 1;  // Fade in effect
+    }
+  }
+
+
