@@ -1,8 +1,8 @@
-@import "../../styles/mixins.scss";
+@import "../../../styles/mixins.scss";
 .Home {
   &_wrapper {
     background: linear-gradient(to top right, #6e00ebab, #6e00eb),
-      url("../../../../public/bg-home.webp");
+      url("../../../../../public/bg-home.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

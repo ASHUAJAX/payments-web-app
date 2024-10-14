@@ -1,5 +1,5 @@
-@import "../../../styles/mixins.scss";
-@import "../../../styles/var.scss";
+@import "../../../../styles/mixins.scss";
+@import "../../../../styles/var.scss";
 
 .TestimonialComp {
   width: 100%;
@@ -50,7 +50,7 @@
       flex: 1;
       gap: 20px;
       div {
-        background: url("../../../../../public/testimonialImg/shape.svg");
+        background: url("../../../../../../public/testimonialImg/shape.svg");
         background-size: cover;
         background-repeat: no-repeat;
         height: 40px;

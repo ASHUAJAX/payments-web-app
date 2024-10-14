@@ -1,6 +1,6 @@
 import React from 'react';
 import "./HomeComp.scss";
-import ButtonComp from '../ButtonComp';
+import ButtonComp from '../../ButtonComp';
 import PaymentSolutionSection from './PaymentSolutionSection';
 import WhyChooseUs from './WhyChooseUs';
 import TestimonialComp from './TestimonialComp';

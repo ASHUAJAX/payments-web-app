@@ -1,12 +1,21 @@
 "use client"
 import React, { useState } from 'react'
-import ButtonComp from '../../ButtonComp';
-import CustomInput from '../../CustomInput';
+import ButtonComp from '../../../ButtonComp';
+import CustomInput from '../../../CustomInput';
 import  "./GetInTouch.scss";
+interface dataInterface {
+  name: string;
+  placeholder: string;
+  value: string;
+  error?: string;
+  label?: string;
+  required: boolean;
+  type: string;
+}
 
 function GetInTouch() {
     
-    const [data, setData] = useState([{
+    const [data, setData] = useState<dataInterface[]>([{
         name: "firstName",
         placeholder: "Enter Your First Name",
         value: "",
@@ -32,7 +41,7 @@ function GetInTouch() {
         type:"textarea"
       }]);
     
-      const onSubmitFunc=(ev:any)=>{
+      const onSubmitFunc=(ev: React.FormEvent<HTMLFormElement>)=>{
         ev.preventDefault();
       }
 
