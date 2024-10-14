@@ -9,10 +9,10 @@ function HomeComp() {
   return (
     <div className='Home'>
       <div className='Home_wrapper'>
-        <h1 className='Home_wrapper_heading'>
+        <h1 className='Home_wrapper_heading' data-aos="zoom-in">
           Seamless Online   Payments <br /> for India
         </h1>
-        <p className='Home_wrapper_para'>Effortless mobile recharge and bill  payments at your fingertips with <br /> Vearn Tech.</p>
+        <p  className='Home_wrapper_para' data-aos="zoom-out">Effortless mobile recharge and bill  payments at your fingertips with <br /> Vearn Tech.</p>
         <ButtonComp type={"button"} text={"get started - it's free"} />
       </div>
 

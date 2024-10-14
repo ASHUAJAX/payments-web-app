@@ -7,7 +7,14 @@
   margin: auto;
   margin-top: 150px;
   margin-bottom: 150px;
-
+  background: linear-gradient(to top left, #6f00eb99, #6f00eb99),
+    url("/getInTouchBg.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  background-position: left;
+  padding: 80px 40px;
+  border-radius: 20px;
   &_content {
     flex: 1;
     h1 {
@@ -21,13 +28,14 @@
   &_formWrapper {
     flex: 1;
     &_form {
-      background-color: $primaryColor;
-      color: white;
+      background-color: #6e00ebd7;
+    
       padding: 4rem 2rem;
       border-radius: 20px;
       border-top-left-radius: 100px;
       border-bottom-right-radius: 100px;
       box-shadow: $boxShadow;
+  
       button {
         margin-top: 1.5rem;
       }

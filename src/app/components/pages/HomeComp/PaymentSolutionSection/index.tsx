@@ -4,7 +4,7 @@ import { data } from './data';
 
 function PaymentSolutionSection() {
     return (
-        <div className='PaymentSolutionSection'>
+        <div className='PaymentSolutionSection' >
      
             <h1 className='PaymentSolutionSection_heading'>
                 Flexible Payment Solutions

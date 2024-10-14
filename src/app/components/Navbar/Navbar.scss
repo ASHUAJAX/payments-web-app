@@ -1,19 +1,19 @@
 @import "../../styles/mixins.scss";
+@import "../../styles/var.scss";
 
 .Navbar {
-  height: 0px;
+  height: 77px;
   width: 100%;
   z-index: 1;
+  color: white;
   position: absolute;
   top: 0px;
-  color: white;
-
+  background-color: $primaryColor;
+  padding-top: 15px;
   &_Wrapper {
     @include flex-center;
     width: 95%;
     margin: auto;
-    height: 77px;
-
     &_logo {
       flex: 1;
       font-size: 1.5rem;

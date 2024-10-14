@@ -7,7 +7,7 @@ function Navbar() {
     <div className='Navbar'>
       <nav className='Navbar_Wrapper'>
         <div className='Navbar_Wrapper_logo'>
-          <h1>PayWeb</h1>
+          <h1> <a href={data[0].link}>PayWeb</a></h1>
         </div>
         <div className='Navbar_Wrapper_navContainer'>
         <ul>

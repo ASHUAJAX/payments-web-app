@@ -9,7 +9,7 @@ interface PaymentCard {
 
 function PaymentCard({ heading, para, type, imgSrc }: PaymentCard) {
     return (
-        <div className={`PaymentCard ${type && 'reversedCard'}`}>
+        <div className={`PaymentCard ${type && 'reversedCard'}`} data-aos={`${type ? 'fade-up-right' : 'fade-up-left'}`}>
             <div className={`PaymentCard_imgWrapper ${type && 'alignLeft'}`}>
                 <img src={imgSrc} alt={heading} />
             </div>

@@ -17,7 +17,7 @@ function TestimonialComp() {
   }
 
   return (
-    <div className='TestimonialComp'>
+    <div className='TestimonialComp' data-aos="flip-left">
       <div className='TestimonialComp_img'>
         <img src='/testimonialImg/testimonialIcon.svg' />
       </div>

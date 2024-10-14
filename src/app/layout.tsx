@@ -1,6 +1,6 @@
 
-import './globals.scss';  
 import { Roboto } from '@next/font/google';
+import './globals.scss';
 
 const roboto = Roboto({
   subsets: ['latin'],          // Load the Latin subset
@@ -9,6 +9,7 @@ const roboto = Roboto({
 });
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  
   return (
     <html lang="en">
       <body className={roboto.className}>

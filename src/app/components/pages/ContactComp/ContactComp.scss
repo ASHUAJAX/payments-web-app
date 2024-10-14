@@ -1,0 +1,55 @@
+@import "../../../styles/mixins.scss";
+
+.ContactComp {
+  @include flex-center;
+  width: 100%;
+  margin: auto;
+  padding: 100px;
+  background: linear-gradient(to top right, #6e00eb6d, #6e00eb98),
+  url("../../../../../public/office.webp");
+  gap: 10px;
+  color: white;
+  &_left {
+    flex: 1;
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    height: 500px;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border: 2px solid $primaryColor;
+    box-shadow: $boxShadow;
+    &_head {
+      @include headingFontSizeMixin;
+      margin-bottom: 2rem;
+
+    }
+    &_para {
+      line-height: 1.7rem;
+      font-size: 1.2rem;
+    }
+    &_contactDetailWrapper {
+        margin-top: 2rem;
+      &_head {
+        font-weight: 700;
+       font-size: 1.4rem;
+    
+      }
+      &_detail {
+        line-height: 1.7rem;
+        margin-top: 10px;
+        font-size: 1.2rem;
+      }
+    }
+  }
+  &_right {
+    flex: 1;
+    background: linear-gradient(to top right, #6e00eb6d, #6e00eb98),
+    url("../../../../../public/office.webp");
+    background-size: cover;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    height: 500px;
+    box-shadow: $boxShadow;
+    border: 2px solid $primaryColor;
+  }
+}

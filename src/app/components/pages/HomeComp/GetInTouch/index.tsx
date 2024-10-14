@@ -46,7 +46,7 @@ function GetInTouch() {
       }
 
     return (
-        <div className='GetInTouch'>
+        <div className='GetInTouch' data-aos="zoom-in">
             <div className='GetInTouch_content'>
                 <h1>Get in Touch</h1>
                 <p>Contact us for seamless online payment solutions, mobile recharge, and bill payments for Indian customers.</p>
