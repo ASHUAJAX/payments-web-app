@@ -16,8 +16,6 @@ function TestimonialComp() {
     }
   }
 
- 
-
   return (
     <div className='TestimonialComp'>
       <div className='TestimonialComp_img'>

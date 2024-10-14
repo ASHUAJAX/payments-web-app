@@ -1,0 +1,57 @@
+@import "../../styles/var.scss";
+@import "../../styles/mixins.scss";
+.Footer {
+  background-color: $primaryColor;
+  padding: 100px 20px 50px 20px;
+  color: white;
+  &_wrapper {
+    display: flex;
+    justify-content: center;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    &_contact {
+      flex: 2;
+      &_head {
+        font-size: 2.4rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+      &_email {
+        margin-bottom: 10px;
+      }
+      &_address {
+      }
+    }
+    &_quickLinks {
+      flex: 1;
+      &_head {
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+      &_list {
+        li {
+          list-style: none;
+          margin-bottom: 10px;
+        }
+      }
+    }
+    &_sendMsg {
+      flex: 1;
+      &_head {
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+      &_afterSubmit {
+        background-color: #00000068;
+        @include flex-center;
+        border-radius: 10px;
+        padding: 15px;
+      }
+    }
+  }
+  &_bottom{
+margin-top: 100px;
+  }
+}

@@ -4,6 +4,7 @@ import ButtonComp from '../ButtonComp';
 import PaymentSolutionSection from './PaymentSolutionSection';
 import WhyChooseUs from './WhyChooseUs';
 import TestimonialComp from './TestimonialComp';
+import GetInTouch from './GetInTouch';
 function HomeComp() {
   return (
     <div className='Home'>
@@ -16,6 +17,7 @@ function HomeComp() {
       </div>
 
       <PaymentSolutionSection/>
+      <GetInTouch/>
       <WhyChooseUs/>
       <TestimonialComp/>
     </div>

@@ -44,7 +44,7 @@
             border: 29px solid $primaryColor;
             width: 290px;
             border-radius: 1000px;
-            box-shadow: $primaryColor 0px 0px 20px;
+            box-shadow: $boxShadow;
         }
     }
     &_contentWrapper{

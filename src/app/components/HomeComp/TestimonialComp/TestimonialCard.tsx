@@ -9,8 +9,6 @@ interface TestimonialCardProps {
 
 function TestimonialCard({ msg, imgSrc, name, navigateFunc }: TestimonialCardProps) {
 
-
-
     return (
         <div className='TestimonialCard'>
             <h1 className='TestimonialCard_msg'>{msg}</h1>

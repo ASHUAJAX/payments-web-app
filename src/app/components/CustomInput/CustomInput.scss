@@ -1,0 +1,22 @@
+@import "../../styles/var.scss";
+.label{
+}
+.input{
+    background-color: transparent;
+    color: white;
+    height: 2.9rem;
+    width: 100%;
+    border: 2px solid white;
+    background-color: white;
+    margin: 10px 0px;
+    padding: 10px;
+    color: $primaryColor;
+    font-size: 1rem;
+    border-radius: 10px;
+    &::placeholder{
+        color: $primaryColor;
+    }
+    &:focus{
+        outline: none;
+    }
+}

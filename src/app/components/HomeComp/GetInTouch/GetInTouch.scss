@@ -1,0 +1,34 @@
+@import "../../../styles/var.scss";
+@import "../../../styles/mixins.scss";
+.GetInTouch {
+  @include flex-center;
+  width: 95%;
+  gap: 40px;
+  margin: auto;
+  margin-top: 150px;
+  margin-bottom: 150px;
+
+  &_content {
+    h1 {
+      @include headingFontSizeMixin;
+    }
+    p {
+      margin-top: 10px;
+      line-height: 1.7em;
+    }
+  }
+  &_formWrapper {
+    &_form {
+      background-color: $primaryColor;
+      color: white;
+      padding: 4rem 2rem;
+      border-radius: 20px;
+      border-top-left-radius: 100px;
+      border-bottom-right-radius: 100px;
+      box-shadow: $boxShadow;
+      button {
+        margin-top: 1.5rem;
+      }
+    }
+  }
+}

@@ -4,6 +4,7 @@
     width: 95%;
     margin: auto;
     margin-top: 150px;
+    margin-bottom: 150px;
 
   &_headParaWrapper {
     @include flex-center;
@@ -14,7 +15,6 @@
     }p{
         width: 70%;
 text-align: justify;
-font-size: 16px;
 font-weight: 400;
 line-height: 1.7em;
     }
