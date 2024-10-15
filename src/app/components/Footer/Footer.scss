@@ -55,3 +55,17 @@
 margin-top: 100px;
   }
 }
+
+@media (min-width:0px) and (max-width:850px) {
+  .Footer{
+    &_wrapper {
+      flex-direction: column;
+    }
+  }
+  .Footer_wrapper_quickLinks{
+    margin-top: 2rem;
+  }
+  .Footer_wrapper_sendMsg{
+    margin-top: 2rem;
+  }
+}

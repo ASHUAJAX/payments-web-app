@@ -1,9 +1,10 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Footer.scss";
 import CustomInput from "../CustomInput";
 import ButtonComp from "../ButtonComp";
 import { CircularProgress } from "@mui/material";
+import AOS from 'aos';
 
 interface EmailInputData {
   name: string;
@@ -37,6 +38,16 @@ function Footer() {
     }, 2000);
   };
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration (in ms)
+      once: false,    // Animation triggers on every scroll
+      offset: -100,    // Trigger animations 100px before the element reaches the viewport
+    });
+
+    AOS.refresh(); // Refresh animations when dynamically loaded
+  }, []);
+
   return (
     <div className="Footer">
       <div className="Footer_wrapper">
@@ -51,9 +62,9 @@ function Footer() {
         <div className="Footer_wrapper_quickLinks">
           <h1 className="Footer_wrapper_quickLinks_head">quick links</h1>
           <ul className="Footer_wrapper_quickLinks_list">
-            <li data-aos="fade-right" data-aos-delay="100" >privacy policy</li>
-            <li data-aos="fade-right" data-aos-delay="200">terms & condition</li>
-            <li data-aos="fade-right" data-aos-delay="300">refund policy</li>
+            <li data-aos="fade-right" data-aos-delay="100" ><a href="/privacy-policy">privacy policy</a></li>
+            <li data-aos="fade-right" data-aos-delay="200"><a href="/terms-&-condition">terms & condition</a></li>
+            <li data-aos="fade-right" data-aos-delay="300"><a href="/refund-policy">refund policy</a></li>
           </ul>
         </div>
         <div className="Footer_wrapper_sendMsg">

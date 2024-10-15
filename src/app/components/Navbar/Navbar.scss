@@ -1,7 +1,8 @@
 @import "../../styles/mixins.scss";
 @import "../../styles/var.scss";
 
-.Navbar {
+.Navbar,
+.MobileNavbar {
   height: 77px;
   width: 100%;
   z-index: 1;
@@ -10,6 +11,7 @@
   top: 0px;
   background-color: $primaryColor;
   padding-top: 15px;
+
   &_Wrapper {
     @include flex-center;
     width: 95%;
@@ -21,7 +23,6 @@
 
     &_navContainer {
       flex: 2;
-
       ul {
         @include flex-center;
         gap: 20px;
@@ -42,5 +43,105 @@
         }
       }
     }
+  }
+}
+
+@keyframes showNavabarAni {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.MobileNavbar {
+  display: none;
+  &_Wrapper {
+    &_logo {
+      flex: 1;
+    }
+    &_navContainer {
+      flex: none;
+      background-color: white;
+      color: $primaryColor;
+      height: 40px;
+      width: 40px;
+      border-radius: 10px;
+      @include flex-center;
+      cursor: pointer;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+        rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+      svg {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+.mobileMenu_active {
+  width: 100% !important;
+}
+
+.mobileMenu_wrapper {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 0%;
+  background-color: rgba(0, 0, 0, 0.555);
+  transition: 0.4s;
+  overflow: hidden;
+
+  &_nav {
+    width: 80%;
+    height: 100vh;
+    background-color: $primaryColor;
+
+    &_header {
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      &_icon {
+        flex: 1;
+        cursor: pointer;
+        text-align: right;
+      }
+    }
+
+    &_active {
+      font-weight: bold;
+      color: $primaryColor;
+    }
+
+    ul {
+      display: flex;
+      margin-left: 10px;
+      flex-direction: column;
+      padding: 0px;
+      padding-top: 20px;
+      width: max-content;
+
+      li {
+        text-transform: capitalize;
+        border: 0px;
+        font-size: 1.7rem;
+        margin-bottom: 10px;
+        text-align: left;
+      }
+    }
+  }
+}
+
+
+@media (min-width:0px) and  (max-width:768px){
+  .Navbar{
+    display: none;
+  }
+  .MobileNavbar{
+    display: block;
   }
 }

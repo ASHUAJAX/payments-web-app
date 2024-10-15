@@ -4,11 +4,9 @@
   @include flex-center;
   width: 100%;
   margin: auto;
-  padding: 100px;
-  background: linear-gradient(to top right, #6e00eb6d, #6e00eb98),
-  url("../../../../../public/office.webp");
-  gap: 10px;
-  color: white;
+  padding: 50px;
+  margin-top: 70px;
+  gap: 50px;
   &_left {
     flex: 1;
     backdrop-filter: blur(10px);
@@ -21,7 +19,6 @@
     &_head {
       @include headingFontSizeMixin;
       margin-bottom: 2rem;
-
     }
     &_para {
       line-height: 1.7rem;
@@ -51,5 +48,26 @@
     height: 500px;
     box-shadow: $boxShadow;
     border: 2px solid $primaryColor;
+  }
+}
+
+@media (min-width:0px) and (max-width:1111px) {
+  .ContactComp{
+    flex-direction: column;
+    padding: 10px;
+    margin-top: 170px;
+ 
+    &_left {
+      flex: none;
+      width: 90%;
+      border-radius: 10px;
+      height: max-content;
+    }
+    &_right {
+      flex: none;
+      width:90%!important;
+      border-radius: 10px;
+      margin-bottom: 50px;
+    }
   }
 }

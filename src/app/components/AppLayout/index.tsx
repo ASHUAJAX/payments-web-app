@@ -14,7 +14,7 @@ function AppLayout({ component }: AppLayoutProps) {
     // Initialize AOS
     useEffect(() => {
         AOS.init({
-          duration: 700, // Animation duration
+          duration: 1000, // Animation duration
           easing: 'ease-in-out', // Easing function
           once: false, // Whether animation should happen only once
         });

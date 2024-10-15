@@ -37,3 +37,19 @@ line-height: 1.7em;
     }
   }
 }
+
+
+@media (min-width:0px) and (max-width:768px) {
+  .WhyChooseUs_headParaWrapper{
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    
+  }
+}
+@media (min-width:0px) and (max-width:430px) {
+  .WhyChooseUs_counterWrapper{
+    flex-direction: column;
+    gap: 50px;
+  }
+}

@@ -1,8 +1,9 @@
 "use client";
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { data } from './data';
 import TestimonialCard from './TestimonialCard';
 import "./TestimonialComp.scss";
+
 
 function TestimonialComp() {
 
@@ -10,14 +11,16 @@ function TestimonialComp() {
 
   const navigateFunc = (type: string): void => {
     if (type === "prev") {
-      if (selectedCard >= 1) setSelectedCard((prev) => prev - 1); else { setSelectedCard(data.length-1); }
+      if (selectedCard >= 1) setSelectedCard((prev) => prev - 1); else { setSelectedCard(data.length - 1); }
     } else {
-      if (selectedCard < data.length-1) { setSelectedCard((prev) => prev + 1); } else { setSelectedCard(0); }
+      if (selectedCard < data.length - 1) { setSelectedCard((prev) => prev + 1); } else { setSelectedCard(0); }
     }
   }
 
+
+
   return (
-    <div className='TestimonialComp' data-aos="flip-left">
+    <div className='TestimonialComp' data-aos="zoom-in">
       <div className='TestimonialComp_img'>
         <img src='/testimonialImg/testimonialIcon.svg' />
       </div>

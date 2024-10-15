@@ -1,62 +1,86 @@
 @import "../../../../styles/mixins.scss";
 @import "../../../../styles/var.scss";
 
-
 .PaymentSolutionSection {
-    width: 70%;
-    margin: auto;
+  width: 70%;
+  margin: auto;
+overflow: hidden;
+  &_heading {
+    text-align: center;
+    @include headingFontSizeMixin;
+  }
 
-    &_heading {
-        text-align: center;
-        @include headingFontSizeMixin;
-    }
-
-    &_para {
-        text-align: center;
-        margin-bottom: 50px;
-        margin-top: 10px;
-        line-height: 1.7em;
-    }
+  &_para {
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 10px;
+    line-height: 1.7em;
+  }
 }
 
-.reversedCard{
-    flex-direction: row-reverse
+.reversedCard {
+  flex-direction: row-reverse;
 }
-.alignRight{
-    text-align: right
+.alignRight {
+  text-align: right;
 }
-.alignLeft{
-    text-align: left!important;
+.alignLeft {
+  text-align: left !important;
 }
 .PaymentCard {
-    @include flex-center;
-    padding: 10px;
-    width: 100%;
-   
-   gap: 7.7rem;
+  @include flex-center;
+  padding: 10px;
+  width: 100%;
 
-    &_imgWrapper{
-        flex: 1;
-       
-        text-align: right;
-        img {
-           
-            border: 29px solid $primaryColor;
-            width: 290px;
-            border-radius: 1000px;
-            box-shadow: $boxShadow;
-        }
+  gap: 7.7rem;
+
+  &_imgWrapper {
+    flex: 1;
+
+    text-align: right;
+    img {
+      border: 29px solid $primaryColor;
+      width: 290px;
+      border-radius: 1000px;
+      box-shadow: $boxShadow;
     }
-    &_contentWrapper{
-       
-        flex: 1;
-        h1{
-            font-weight: 500;
-            margin-bottom: 10px;
-        }
-        p{
-            line-height: 1.7em;
-        }
-        
+  }
+  &_contentWrapper {
+    flex: 1;
+    h1 {
+      font-weight: 500;
+      margin-bottom: 10px;
     }
+    p {
+      line-height: 1.7em;
+    }
+  }
+}
+
+@media (min-width: 0px) and (max-width: 768px) {
+  .PaymentCard {
+    flex-direction: column;
+    gap: 1.7rem;
+    &_imgWrapper {
+      img {
+        border: 29px solid $primaryColor;
+        width: 200px;
+      }
+    }
+    &_contentWrapper {
+      h1 {
+        text-align: center;
+      }
+      p {
+        text-align: center;
+      }
+    }
+    margin-bottom: 50px;
+  }
+  .reversedCard {
+    flex-direction: none;
+  }
+  .alignRight {
+    text-align: left;
+  }
 }

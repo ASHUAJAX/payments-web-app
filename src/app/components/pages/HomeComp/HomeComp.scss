@@ -18,12 +18,27 @@
       font-size: 5.7rem;
       font-weight: 900;
       margin-top: 1rem;
+      width: 90%;
     }
     &_para {
       font-size: 1.1rem;
+      width: 90%;
     }
     button {
       margin-top: 10px;
+    }
+  }
+}
+
+@media (min-width:0px) and (max-width:768px) {
+  .Home{
+    &_wrapper {
+      &_heading {
+        font-size: 2.9rem;
+        font-weight: 900;
+        margin-top: 1rem;
+       
+      }
     }
   }
 }

@@ -19,7 +19,7 @@ function ContactComp() {
             <br /> Noida, Uttar Pradesh 201313</p>
         </div>
       </div>
-      <div data-aos="fade-left" className='ContactComp_right'></div>
+      <div  className='ContactComp_right'></div>
     </div>
   )
 }
