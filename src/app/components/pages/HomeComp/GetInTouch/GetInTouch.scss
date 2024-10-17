@@ -1,5 +1,6 @@
 @import "../../../../styles/var.scss";
 @import "../../../../styles/mixins.scss";
+
 .GetInTouch {
   @include flex-center;
   width: 95%;
@@ -7,7 +8,7 @@
   margin: auto;
   margin-top: 150px;
   margin-bottom: 150px;
-  background: linear-gradient(to top left, #6f00eb99, #6f00eb99),
+  background: linear-gradient(to top left, #6e00ebcd, #6e00ebe4),
     url("/getInTouchBg.webp");
   background-size: cover;
   background-repeat: no-repeat;
@@ -15,27 +16,31 @@
   background-position: left;
   padding: 80px 40px;
   border-radius: 20px;
+
   &_content {
     flex: 1;
+
     h1 {
       @include headingFontSizeMixin;
     }
+
     p {
       margin-top: 10px;
       line-height: 1.7em;
     }
   }
+
   &_formWrapper {
     flex: 1;
     &_form {
-      background-color: #6e00ebd7;
-    
+      background-color: white;
       padding: 4rem 2rem;
       border-radius: 20px;
-      border-top-left-radius: 100px;
-      border-bottom-right-radius: 100px;
       box-shadow: $boxShadow;
-  
+      color: black;
+      input {
+        border: 2px solid $primaryColor;
+      }
       button {
         margin-top: 1.5rem;
       }
@@ -43,14 +48,15 @@
   }
 }
 
-@media (min-width:0px) and (max-width:768px) {
-  .GetInTouch{
+@media (min-width: 0px) and (max-width: 768px) {
+  .GetInTouch {
     flex-direction: column;
     padding: 40px 10px;
   }
-  .GetInTouch_formWrapper_form{
+
+  .GetInTouch_formWrapper_form {
     padding: 4rem 1rem;
-    
+
     button {
       margin-top: 0rem;
     }

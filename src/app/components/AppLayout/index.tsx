@@ -17,6 +17,7 @@ function AppLayout({ component }: AppLayoutProps) {
           duration: 1000, // Animation duration
           easing: 'ease-in-out', // Easing function
           once: false, // Whether animation should happen only once
+          mirror:true,
         });
       }, []); // Empty dependency array to run only once on mount
     return (

@@ -1,10 +1,10 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import "./Footer.scss";
-import CustomInput from "../CustomInput";
-import ButtonComp from "../ButtonComp";
 import { CircularProgress } from "@mui/material";
-import AOS from 'aos';
+import Link from "next/link";
+import React, { useState } from "react";
+import ButtonComp from "../ButtonComp";
+import CustomInput from "../CustomInput";
+import "./Footer.scss";
 
 interface EmailInputData {
   name: string;
@@ -38,23 +38,15 @@ function Footer() {
     }, 2000);
   };
 
-  useEffect(() => {
-    AOS.init({
-      duration: 1000, // Animation duration (in ms)
-      once: false,    // Animation triggers on every scroll
-      offset: -100,    // Trigger animations 100px before the element reaches the viewport
-    });
 
-    AOS.refresh(); // Refresh animations when dynamically loaded
-  }, []);
 
   return (
-    <div className="Footer">
+    <div className="Footer" data-aos="zoom-in">
       <div className="Footer_wrapper">
         <div className="Footer_wrapper_contact">
           <h1 className="Footer_wrapper_contact_head">contact</h1>
-          <p className="Footer_wrapper_contact_email" data-aos="fade-right" data-aos-delay="100">info@example.online</p>
-          <p className="Footer_wrapper_contact_address" data-aos="fade-right" data-aos-delay="200">
+          <p className="Footer_wrapper_contact_email" >info@example.online</p>
+          <p className="Footer_wrapper_contact_address" >
             10th Floor Tower B Windsor IT Park Sector 125,
             <br /> Noida, Uttar Pradesh 201313
           </p>
@@ -62,9 +54,9 @@ function Footer() {
         <div className="Footer_wrapper_quickLinks">
           <h1 className="Footer_wrapper_quickLinks_head">quick links</h1>
           <ul className="Footer_wrapper_quickLinks_list">
-            <li data-aos="fade-right" data-aos-delay="100" ><a href="/privacy-policy">privacy policy</a></li>
-            <li data-aos="fade-right" data-aos-delay="200"><a href="/terms-&-condition">terms & condition</a></li>
-            <li data-aos="fade-right" data-aos-delay="300"><a href="/refund-policy">refund policy</a></li>
+            <li><Link href="/privacy-policy">privacy policy</Link></li>
+            <li ><Link href="/terms-&-condition">terms & condition</Link></li>
+            <li ><Link href="/refund-policy">refund policy</Link></li>
           </ul>
         </div>
         <div className="Footer_wrapper_sendMsg">
@@ -78,7 +70,7 @@ function Footer() {
               )}
             </p>
           ) : (
-            <form onSubmit={onSendMessage} data-aos="fade-right" data-aos-delay="100" >
+            <form onSubmit={onSendMessage}  >
               <CustomInput setData={setEmailInputData} data={emailInputData} />
               <br />
               <ButtonComp varient="fill" text="send message" type="submit" />

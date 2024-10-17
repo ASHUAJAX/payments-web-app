@@ -1,28 +1,40 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./Navbar.scss";
 import data from "./data.json";
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
+import Link from 'next/link';
 
 function Navbar() {
 
   const [isMobileNavActive, setIsMobileNavActive] = useState(false);
+ const[isTransparentNav,setIsTransparentNav]=useState(false);
+
   const mobileNavActiveToggler = () => {
     setIsMobileNavActive((prev: boolean) => !prev);
   }
+
+  useEffect(()=>{
+if(window.location.pathname === "/"){
+  setIsTransparentNav(true);
+}else{
+  setIsTransparentNav(false);
+}
+  },[]);
+
   return (
     <>
-      <div className='Navbar'>
+      <div className={`Navbar ${isTransparentNav && 'transparentNav'}`}>
         <nav className='Navbar_Wrapper'>
           <div className='Navbar_Wrapper_logo'>
-            <h1> <a href={data[0].link}>PayWeb</a></h1>
+            <h1> <Link href={data[0].link}>PayWeb</Link></h1>
           </div>
           <div className='Navbar_Wrapper_navContainer'>
             <ul>
               {
                 data.map((elm, ix) => (
-                  <li key={ix}><a href={elm.link}>{elm.name}</a></li>
+                  <li key={ix}><Link href={elm.link}>{elm.name}</Link></li>
                 ))
               }
             </ul>
@@ -31,10 +43,10 @@ function Navbar() {
         </nav>
       </div>
 
-      <div className='MobileNavbar'>
+      <div className={`MobileNavbar ${isTransparentNav && 'transparentNav'}`} >
         <nav className='MobileNavbar_Wrapper'>
           <div className='MobileNavbar_Wrapper_logo'>
-            <h1> <a href={data[0].link}>PayWeb</a></h1>
+            <h1> <Link href={data[0].link}>PayWeb</Link></h1>
           </div>
           <div className='MobileNavbar_Wrapper_navContainer' onClick={mobileNavActiveToggler}>
             <MenuOpenIcon />
@@ -56,7 +68,7 @@ function Navbar() {
                   <li
                     key={index}
                   >
-                 <a href={elm.link}>{elm.name}</a>
+                 <Link href={elm.link}>{elm.name}</Link>
                   </li>
                 );
               })}

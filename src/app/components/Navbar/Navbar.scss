@@ -1,6 +1,8 @@
 @import "../../styles/mixins.scss";
 @import "../../styles/var.scss";
-
+.transparentNav{
+  background-color: transparent!important;
+}
 .Navbar,
 .MobileNavbar {
   height: 77px;
