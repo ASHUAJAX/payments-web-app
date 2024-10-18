@@ -3,16 +3,18 @@ import React, { useEffect } from 'react'
 import Navbar from '../Navbar';
 import Footer from '../Footer';
 import AOS from "aos";
-import "aos/dist/aos.css"; // Import AOS styles
+import "aos/dist/aos.css"; 
+import useScrollToTop from '@/app/hooks/useScrollToTop';
 interface AppLayoutProps {
     component: React.ReactNode;
 }
 function AppLayout({ component }: AppLayoutProps) {
     
-    
+    useScrollToTop();
 
     // Initialize AOS
     useEffect(() => {
+      
         AOS.init({
           duration: 1000, // Animation duration
           easing: 'ease-in-out', // Easing function
